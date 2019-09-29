@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <style type="text/css">
+        input{
+            border: none;
+            font-size: 16px;
+        }
+
+    </style>
+    <script type="text/javascript">
+        var myname = document.querySelector("#myname");
+        myname.addEventListener("focusin", function(){
+            myname.contentEditable = true;
+            myname.style.border = "1px solid #000000";
+        });
+
+        myname.addEventListener("focusout", function(){
+            myname.contentEditable = false;
+            myname.style.border = "none";
+        });
+    </script>
+</head>
+<body>
+<input id = "myname" type="text" name="n1" value = "Harikrishnan" contenteditable="false">
+
+</body>
+</html>

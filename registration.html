@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="registration.css">
+    <script src="registration.js"></script>
+</head>
+<body>
+<header>
+    Registration form
+</header>
+<div class="main-container">
+    <div class="form-container">
+        <form method="post" action="newuser_reg.php" name="RegisterForm" onsubmit="return validateForm()" >
+            <div class="input-line">
+                <input type="text" placeholder="Firstname" name="firstname" required>
+                <input type="text" placeholder="Lastname" name="lastname" required>
+
+            </div>
+
+            <div class="input-line">
+                <input type="text" placeholder="Email" name="email" required>
+            </div>
+
+            <div class="input-line">
+                <input type="password" placeholder="Password" name="pass" minlength="8" required><br>
+                <input type="password" placeholder="Confirm" name="cpass" required>
+            </div>
+
+            <div class="input-line">
+            <span>Use 8 or more characters with a mix of letters and numbers</span>
+            </div>
+
+            <div class="input-line">
+                <input type="date" placeholder="Date of birth" name="dob" min="1970-01-01" max="2005-12-31" required>
+                <input type="radio" name="Gender" value="Male" required> Male
+                <input type="radio" name="Gender" value="Female" required> Female
+            </div>
+
+            <input type="number" placeholder="Mobile number" name="mobile" minlength="10" maxlength="10" required>
+            <input type="number" placeholder="Pincode" name="pincode"minlength="6" maxlength="6" required><br>
+            <input type="submit" value="Finish">
+
+        </form>
+    </div>
+    <div class="image-container">
+        <img src="undraw_Login_v483.svg" width="300px" height="300px" >
+    </div>
+</div>
+</body>
+</html>

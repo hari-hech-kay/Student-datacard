@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="file_validation.js"></script>
+</head>
+<body style="display: flex; align-items: center; min-height: 100%">
+
+    <div class="container" >
+        <h1>Add a certificate</h1>
+        <div class="row">
+            <div class="col-md" style="display: flex; align-items: center; min-height: 100%" >
+
+                <form method="post" action="add_certificate.php" enctype="multipart/form-data" name="certificate_form" >
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="certificate_name" placeholder="Give a name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea class="form-control" rows="5" name="desc" placeholder="Description (optional)" ></textarea>
+                    </div>
+
+                    <div class="container mt-3">
+                        <div class="custom-file ">
+                            <input type="file" class="custom-file-input"  name="files" accept="image/jpeg,image/png" required>
+                            <label class="custom-file-label" id="file-label">Choose file</label>
+                        </div>
+                        <small class="mb-3">Only .jpg / .jpeg / .png files less than 1 MB is allowed</small>
+                    </div>
+
+                    <input type="submit" name="submit" id="upload-btn" class="btn btn-primary mt-3" value="Upload">
+                </form>
+            </div>
+
+            <div class="col-md">
+                <div class="container" style="display:inline-block; text-align: center ">
+                    <img src="undraw_image_upload_wqh3.svg" id="preview-img" class="img-thumbnail img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
